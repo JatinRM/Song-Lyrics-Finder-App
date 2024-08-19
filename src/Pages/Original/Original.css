@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    color: white;
+}
+
+body {
+    border: none;
+    margin: 20px 20px;
+}
+
+.container {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto 30px auto;
+    --borderWidth: 1px;
+    position: relative;
+    padding: 6px 10px 5px 10px;
+    border-top-left-radius: 10%;
+}
+
+.container:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(45deg,
+            #ff0000,
+            #ff7300,
+            #fffb00,
+            #48ff00,
+            #00ffd5,
+            #002bff,
+            #7a00ff,
+            #ff00c8,
+            #ff0000);
+    filter: blur(5px);
+    /* border-radius: calc(2 * var(--borderWidth)); */
+    z-index: -1;
+    animation: glowing-button-85 19s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    background-size: 300% 300%;
+}
+
+
+.cont1 {
+    margin-top: 40px;
+    transition: 0.5s;
+}
+
+.cont2 {
+    margin-top: 200px;
+
+}
+
+.showLyrics {
+    display: flex;
+    justify-content: center;
+}
+
+.lyricsText {
+    white-space: pre-wrap;
+    font-family: 'outfit';
+}
+
+.song {
+    outline: none;
+    font-family: 'outfit';
+    color: rgb(255, 255, 255);
+    width: 300px;
+    height: 35px;
+    font-weight: 400;
+    font-size: 17px;
+    background-color: #111;
+    padding-left: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: 0.5s;
+}
+
+.artist {
+    outline: none;
+    font-family: 'outfit';
+    color: rgb(255, 255, 255);
+    width: 200px;
+    height: 35px;
+    font-weight: 400;
+    font-size: 17px;
+    background-color: #111;
+    padding-left: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.5s;
+}
+
+.submitBtn {
+    outline: none;
+    font-family: 'outfit';
+    border-left: none;
+}
+
+.buttonBox {
+    display: flex;
+    justify-content: center;
+}
+
+/* CSS */
+.submitBtn {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: 0.5s;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.submitBtn:before {
+    content: "";
+    background: linear-gradient(45deg,
+            #ff0000,
+            #ff7300,
+            #fffb00,
+            #48ff00,
+            #00ffd5,
+            #002bff,
+            #7a00ff,
+            #ff00c8,
+            #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* @keyframes animatedgradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  } */
+
+.submitBtn:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.submitBtn:hover {
+    box-shadow: 5px 5px #999;
+}
+
+.submitBtn:active {
+    transform: translateX(3px) translateY(3px);
+    box-shadow: none;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+    .song {
+        border-radius: 0px;
+        width: 300px;
+        border-bottom: 2px solid white;
+    }
+    .artist {
+        border-radius: 0px;
+        width: 300px;
+    }
+    .submitBtn {
+        border-radius: 0px;
+    }
+    .submitBtn:before {
+        border-radius: 0px;
+    }
+    .submitBtn:after {
+        border-radius: 0px;
+    }
+}

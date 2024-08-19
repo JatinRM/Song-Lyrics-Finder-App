@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+* {
+    /* font-family: "Edu VIC WA NT Beginner", cursive; */
+
+}
+
+body {
+    background: linear-gradient(to right, #471751, #100C30);
+    background-size: cover;
+    border: 5px solid #a064cc;
+    box-sizing: border-box; /* Ensures the border is included in the width/height calculation */
+    background-color: #1a0026;
+    margin: 0;
+}
+
+.intro {
+    font-family: "New Amsterdam", sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.intro1 {
+    font-size: 4em;
+    margin-top: 100px;
+
+    background-color: #CA4246;
+    background-image: linear-gradient(-45deg,
+            #CA4246 16.666%,
+            #E16541 16.666%,
+            #E16541 33.333%,
+            #F18F43 33.333%,
+            #F18F43 50%,
+            #8B9862 50%,
+            #8B9862 66.666%,
+            #476098 66.666%,
+            #476098 83.333%,
+            #A7489B 83.333%);
+
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+
+}
+
+.intro1:hover {
+    animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+
+@keyframes rainbow-text-simple-animation-rev {
+    0% {
+        background-size: 650%;
+    }
+
+    40% {
+        background-size: 650%;
+    }
+
+    100% {
+        background-size: 100%;
+    }
+}
+
+@keyframes rainbow-text-simple-animation {
+    0% {
+        background-size: 100%;
+    }
+
+    80% {
+        background-size: 650%;
+    }
+
+    100% {
+        background-size: 650%;
+    }
+}
+
+.intro2 {
+    display: flex;
+    justify-content: center;
+    font-size: 0.7em;
+}
+
+.intro3 {
+    font-family: "New Amsterdam", sans-serif;
+    font-size: 1.5em;
+    background: linear-gradient(135deg, #9e7181, #9500ff); /* Gradient colors from the image */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.next {
+    font-family: "New Amsterdam", sans-serif;
+    display: block;
+    margin: 20px auto;
+    height: 30px;
+    width: 50px;
+    font-size: 1.1em;
+    border: 2px solid rgb(173, 166, 166);
+    background-color: #9500ff;
+    color: rgb(230, 223, 223);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.next:hover {
+    background-color: white;
+    color: #9500ff;
+    box-shadow: 5px 5px 2px #9500ff;
+}
+
+.next:active {
+    transform: translateX(5px) translateY(5px);
+    box-shadow: none;
+}
+
+@media (max-width:380px) {
+    .intro1 {
+        font-size: 3em;
+    }
+}

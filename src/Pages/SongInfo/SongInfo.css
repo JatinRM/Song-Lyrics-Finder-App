@@ -1,0 +1,102 @@
+.gridContainer {
+    display: grid;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 50px;
+}
+
+@media (max-width: 1500px) {
+    .gridContainer {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .gridContainer {
+        gap: -20px;
+    }
+}
+
+@media (max-width: 850px) {
+    .gridContainer {
+        gap: 20px;
+    }
+}
+
+.showLyrics {
+    grid-column: 1/2;
+}
+
+.showLyrics p {
+    font-family: 'outfit';
+}
+
+.artistInfo {
+    grid-column: 3/4;
+    font-family: 'outfit';
+}
+
+.artistImage img {
+    height: 150px;
+    width: 150px;
+    border: solid 3px #ababab;
+    margin-bottom: 10px;
+}
+
+.artistInfo .a {
+    font-family: 'outfit';
+}
+
+.showSong span {
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
+.showArtist {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.artistLink span{
+    color: #adb5da;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.artistLink{
+    text-decoration: none;
+}
+
+.showArtistLink span {
+    margin-top: 10px;
+    font-size: 15px;
+    color: black;
+    background-color: white;
+}
+
+@media (max-width:500px) {
+    .gridContainer {
+        
+    }
+    .artistInfo {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .showLyrics {
+        grid-row: 2/3;
+    }
+    .artistInfo {
+        display: grid;
+    }
+    .artistImage {
+        grid-column: 1/2;
+    }
+    .showSong {
+        grid-column: 2/3;
+        align-self: center;
+    }
+}
